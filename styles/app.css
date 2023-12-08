@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'GasoekOne-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: url('~/assets/fonts/GasoekOne-Regular.ttf'); /* IE9 Compat Modes */
+}
+
+.meat {
+  font-family: 'GasoekOne-Regular';
+}
+
+.input {
+  @apply border-0 px-3 py-3 placeholder-neutral-400 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150;
+}
