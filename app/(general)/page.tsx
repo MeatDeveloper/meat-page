@@ -3,7 +3,7 @@ import Link from "next/link"
 import { FaDiscord, FaGithub } from "react-icons/fa"
 import { LuBook } from "react-icons/lu"
 
-import { siteConfig } from "@/config/site"
+import { meatAddress, siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import {
@@ -12,7 +12,6 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/layout/page-header"
-import { CopyButton } from "@/components/shared/copy-button"
 
 export default function HomePage() {
   return (
@@ -28,6 +27,19 @@ export default function HomePage() {
         <PageHeaderHeading>MEAT</PageHeaderHeading>
         <PageHeaderDescription>{siteConfig.description}</PageHeaderDescription>
         <PageHeaderCTA>
+
+          <Link
+            href={`https://traderjoexyz.com/${meatAddress}`}
+            target="_blank"
+            rel="noreferrer noopener"
+            className={cn(
+              buttonVariants(),
+              "bg-[#F24430] text-white hover:bg-[#F24430]/80"
+            )}
+          >
+            <Image src="/joe.png" alt="Joe Logo" width={20} height={20} className="mr-2 h-4 w-4" />
+            Buy
+          </Link>
           <Link
             href={siteConfig.links.docs}
             target="_blank"

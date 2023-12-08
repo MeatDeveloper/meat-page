@@ -3,6 +3,7 @@ import { useAccount, useContractRead, useNetwork } from "wagmi"
 
 import { trimFormattedBalance } from "@/lib/utils"
 import { erc20ABI } from "@/lib/generated/blockchain"
+import { meatAddress } from "@/config/site"
 
 interface WalletBalanceProps
   extends Omit<HTMLAttributes<HTMLSpanElement>, "children"> {
@@ -16,13 +17,13 @@ export const WalletMeatBalance = ({
 }: WalletBalanceProps) => {
   const { address } = useAccount()
   const { data: balance } = useContractRead({
-    address: "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7",
+    address: meatAddress,
     abi: erc20ABI,
     functionName: "balanceOf",
     args: [address ?? "" as `0x${string}`],
   })
 
-  // if (!address || !balance) return null
+  if (!address || !balance) return null
 
   return (
     <span className={className} {...props}>
