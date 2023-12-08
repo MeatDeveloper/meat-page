@@ -15,7 +15,7 @@ const avvyAddress = async (address : string) => {
   return await name?.name || null
 }
 
-const truncateAddress = (address: string) => {
+export const truncateAddress = (address: string) => {
   const firstPart = address.slice(0, 5)
   const lastPart = address.slice(-4)
 

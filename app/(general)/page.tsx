@@ -12,6 +12,7 @@ import {
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/layout/page-header"
+import { truncateEthAddress } from "@/lib/utils"
 
 export default function HomePage() {
   return (
@@ -26,10 +27,25 @@ export default function HomePage() {
         />
         <PageHeaderHeading>MEAT</PageHeaderHeading>
         <PageHeaderDescription>{siteConfig.description}</PageHeaderDescription>
+        <Link
+          href={`https://snowtrace.io/address/${meatAddress}`}
+          target="_blank"
+          rel="noreferrer noopener"
+          className={buttonVariants({ variant: "ghost" })}
+        >
+          Contract Address: {truncateEthAddress(meatAddress)}
+        </Link>
+        <Link
+          href={`https://debank.com/profile/0x1bcde1e93ef614461e117a8b07957f3600aca06e`}
+          target="_blank"
+          rel="noreferrer noopener"
+          className={buttonVariants({ variant: "ghost" })}
+        >
+          Multisig Address: {truncateEthAddress("0x1bcDe1E93eF614461E117a8B07957f3600ACA06E")}
+        </Link>
         <PageHeaderCTA>
-
           <Link
-            href={`https://traderjoexyz.com/${meatAddress}`}
+            href={`https://traderjoexyz.com/avalanche/trade?outputCurrency=${meatAddress}`}
             target="_blank"
             rel="noreferrer noopener"
             className={cn(
@@ -37,7 +53,13 @@ export default function HomePage() {
               "bg-[#F24430] text-white hover:bg-[#F24430]/80"
             )}
           >
-            <Image src="/joe.png" alt="Joe Logo" width={20} height={20} className="mr-2 h-4 w-4" />
+            <Image
+              src="/joe.png"
+              alt="Joe Logo"
+              width={20}
+              height={20}
+              className="mr-2 h-4 w-4"
+            />
             Buy
           </Link>
           <Link
