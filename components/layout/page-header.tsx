@@ -38,7 +38,7 @@ function PageHeaderHeading({
     <motion.h1
       variants={fadeDownVariant()}
       className={cn(
-        "meat bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center text-4xl font leading-tight tracking-tight text-transparent drop-shadow-sm dark:from-stone-200 dark:to-red-400 md:text-8xl md:leading-[6rem] lg:leading-[1.1]",
+        "meat bg-gradient-to-br from-black to-stone-500 bg-clip-text text-center text-4xl leading-tight tracking-tight text-transparent drop-shadow-sm dark:from-stone-200 dark:to-red-400 md:text-8xl md:leading-[6rem] lg:leading-[1.1]",
         className
       )}
       {...props}

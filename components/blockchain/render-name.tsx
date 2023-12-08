@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react"
 import AVVY from '@avvy/client'
 import { ethers } from 'ethers'
@@ -10,7 +11,8 @@ const avvyAddress = async (address : string) => {
   const hash = await avvy.reverse(AVVY.RECORDS.EVM, address)
   
   const name = await hash?.lookup()
-  return name?.name
+  // @ts-ignore
+  return await name?.name || null
 }
 
 const truncateAddress = (address: string) => {
@@ -25,16 +27,16 @@ export default function RenderName({ address, chainId }: any) {
   const [isAvvy, setIsAvvy] = useState(false)
 
   useEffect(() => {
-    if (address) {
+    if (address && typeof address === "string") {
       setDisplay(truncateAddress(address))
       if (chainId == 43114) {
         try {
           avvyAddress(address).then((res: any) => {
-            if (res) {
+            if (res != null) {
               setDisplay(res)
               setIsAvvy(true)
             }
-          })
+          }).catch((e: any) => {console.log(e)})
         } catch (e) {
           console.log(e)
         }

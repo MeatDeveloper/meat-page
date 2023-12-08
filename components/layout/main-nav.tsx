@@ -2,10 +2,7 @@
 
 import React from "react"
 import Link from "next/link"
-import {
-  integrationCategories,
-  turboIntegrations,
-} from "@/data/turbo-integrations"
+
 
 import { siteConfig } from "@/config/site"
 import {
@@ -29,7 +26,7 @@ export function MainNav() {
         <LightDarkImage
           LightImage="/logo-dark.png"
           DarkImage="/logo-light.png"
-          alt="TurboETH"
+          alt="MEAT"
           className="rounded-full"
           height={32}
           width={32}

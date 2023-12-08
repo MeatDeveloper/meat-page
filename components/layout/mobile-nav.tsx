@@ -3,10 +3,7 @@
 import { useState } from "react"
 import Link, { LinkProps } from "next/link"
 import { useRouter } from "next/navigation"
-import {
-  integrationCategories,
-  turboIntegrations,
-} from "@/data/turbo-integrations"
+
 import { LuMenu } from "react-icons/lu"
 
 import { menuDashboard } from "@/config/menu-dashboard"
@@ -39,7 +36,7 @@ export function MobileNav() {
           <LightDarkImage
             LightImage="/logo-dark.png"
             DarkImage="/logo-light.png"
-            alt="TurboETH"
+            alt="MEAT"
             className="rounded-full"
             height={32}
             width={32}
@@ -68,7 +65,7 @@ export function MobileNav() {
             <LightDarkImage
               LightImage="/logo-dark.png"
               DarkImage="/logo-light.png"
-              alt="TurboETH"
+              alt="MEAT"
               height={32}
               width={32}
             />

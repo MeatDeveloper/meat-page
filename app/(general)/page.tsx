@@ -13,7 +13,6 @@ import {
   PageHeaderHeading,
 } from "@/components/layout/page-header"
 import { CopyButton } from "@/components/shared/copy-button"
-import { ExampleDemos } from "@/components/shared/example-demos"
 
 export default function HomePage() {
   return (
@@ -38,7 +37,7 @@ export default function HomePage() {
             <LuBook className="mr-2 h-4 w-4" />
             Docs
           </Link>
-          {/* <Link
+          <Link
             href={siteConfig.links.github}
             target="_blank"
             rel="noreferrer noopener"
@@ -46,7 +45,7 @@ export default function HomePage() {
           >
             <FaGithub className="mr-2 h-4 w-4" />
             Github
-          </Link> */}
+          </Link>
           <Link
             href={siteConfig.links.discord}
             target="_blank"
@@ -68,7 +67,6 @@ export default function HomePage() {
           </CopyButton>
         </PageHeaderCTA> */}
       </PageHeader>
-      <ExampleDemos />
     </div>
   )
 }

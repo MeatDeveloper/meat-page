@@ -1,5 +1,4 @@
 import { ImageResponse } from "next/og"
-import { turboIntegrations } from "@/data/turbo-integrations"
 import { env } from "env.mjs"
 
 export const runtime = "edge"
@@ -14,9 +13,7 @@ export const contentType = "image/png"
 const url = env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000"
 
 export function IntegrationOgImage(
-  integration: keyof typeof turboIntegrations
 ) {
-  const integrationData = turboIntegrations[integration]
 
   return async function Image() {
     return new ImageResponse(
@@ -36,41 +33,11 @@ export function IntegrationOgImage(
         >
           <img
             alt="MEAT Logo"
-            src={new URL(integrationData.imgDark, url).toString()}
+            src={"/logo-gradient.png"}
             style={{ borderRadius: "9999px" }}
             tw="w-32 h-32 mb-2 opacity-95"
           />
-          <h1
-            style={{
-              fontSize: "100px",
-              fontFamily: "SF Pro",
-              fontWeight: 900,
-              background:
-                "linear-gradient(to bottom right, #000000 21.66%, #78716c 86.47%)",
-              backgroundClip: "text",
-              color: "transparent",
-              lineHeight: "5rem",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            {integrationData.name}
-          </h1>
-          <h3
-            style={{
-              marginTop: "2rem",
-              fontSize: "22px",
-              fontFamily: "SF Pro",
-              maxWidth: "800px",
-              textAlign: "center",
-              background:
-                "linear-gradient(to bottom right, #000000 21.66%, #78716c 86.47%)",
-              backgroundClip: "text",
-              color: "transparent",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            {integrationData.description}
-          </h3>
+          
         </div>
       ),
       {

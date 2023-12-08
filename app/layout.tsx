@@ -5,7 +5,6 @@ import { ReactNode } from "react"
 import { env } from "@/env.mjs"
 
 import { siteConfig } from "@/config/site"
-import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
 import RootProvider from "@/components/providers/root-provider"
@@ -42,7 +41,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable
           )}
         >
           <RootProvider>{children}</RootProvider>

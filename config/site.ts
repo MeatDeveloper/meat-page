@@ -28,7 +28,7 @@ export const siteConfig: SiteConfig = {
     docs: "https://docs.meat.xyz",
     discord: "https://discord.gg/uweMsAsGe",
     twitter: "https://twitter.com/sausagers_xyz",
-    github: "",
+    github: "https://github.com/MeatDeveloper/meat-page",
   },
 }
 
