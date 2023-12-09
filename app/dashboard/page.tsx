@@ -7,11 +7,11 @@ import { Card } from "@/components/ui/card"
 
 const tokenomics = [
   "21% pre-sale",
-  "50% LP",
+  "42% LP",
   "10% Sausagers",
   "4% MEAT devs (6mo linear vest)",
   "2% Sausagers team",
-  "13% future airdrops, grants, Sausager buybacks, Ferdy integration",
+  "21% future airdrops, grants, Sausager buybacks, Ferdy integration",
 ]
 export default function PageDashboard() {
   return (
