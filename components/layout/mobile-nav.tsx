@@ -70,7 +70,7 @@ export function MobileNav() {
               width={32}
             />
           </MobileLink>
-          {/* <ModeToggle /> */}
+          <ModeToggle />
         </div>
         <ScrollArea className="my-4 mr-4 h-[calc(100vh-8rem)] pb-10">
           <div className="flex flex-col space-y-4">

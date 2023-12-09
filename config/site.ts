@@ -36,5 +36,6 @@ export const DEPLOY_URL =
   "https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fturbo-eth%2Ftemplate-web3-app&project-name=TurboETH&repository-name=turbo-eth&demo-title=TurboETH&env=NEXTAUTH_SECRET,DATABASE_URL&envDescription=How%20to%20get%20these%20env%20variables%3A&envLink=https%3A%2F%2Fgithub.com%2Fturbo-eth%2Ftemplate-web3-app%2Fblob%2Fintegrations%2F.env.example"
 
 
-export const meatAddress = "0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7"
+export const meatTestAddress = "0x0337781a02948a35d154ae817d24b0f755357024"
+export const meatAddress = "0x0337781a02948a35d154ae817d24b0f755357024"
 export const lpAddress = "0x4d0e2e3f4ba0e0e5c4e7e0e1f4c1f5c9f5c9f5c9"

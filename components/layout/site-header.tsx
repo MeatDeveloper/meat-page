@@ -47,6 +47,7 @@ export function SiteHeader() {
             Dashboard
           </Link>
           <WalletConnectCustom />
+          <ModeToggle />
         </div>
       </div>
     </header>

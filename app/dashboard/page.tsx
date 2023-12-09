@@ -3,8 +3,16 @@
 import { motion } from "framer-motion"
 
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/config/design"
+import { Card } from "@/components/ui/card"
 
-
+const tokenomics = [
+  "21% pre-sale",
+  "21% LP",
+  "10% Sausagers",
+  "5% MEAT devs (6mo lock)",
+  "5% Sausagers team (6mo lock)",
+  "38% future airdrops, grants, Sausager buybacks, Ferdy integration",
+]
 export default function PageDashboard() {
   return (
     <motion.div
@@ -15,7 +23,17 @@ export default function PageDashboard() {
       viewport={{ once: true }}
       whileInView="show"
     >
-      
+      <Card className="w-[420px] p-6">
+        <h3 className="text-2xl font-normal">Tokenomics</h3>
+        <p className="text-sm font-light text-gray-400">The secret sauce</p>
+
+        <ul>
+          {tokenomics.map((rule) => (
+            <li key={rule}>{rule}</li>
+          ))}
+        </ul>
+        <hr className="my-3 dark:opacity-30" />
+      </Card>
     </motion.div>
   )
 }

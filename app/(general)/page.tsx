@@ -13,18 +13,14 @@ import {
   PageHeaderHeading,
 } from "@/components/layout/page-header"
 import { truncateEthAddress } from "@/lib/utils"
+import { LightDarkImage } from "@/components/shared/light-dark-image"
 
 export default function HomePage() {
+  
   return (
     <div className="container relative mt-20 px-0">
       <PageHeader className="pb-8">
-        <Image
-          src="/logo-gradient.png"
-          alt="Meat Logo"
-          width={160}
-          height={160}
-          className="h-40 w-40 rounded-2xl"
-        />
+      <LightDarkImage LightImage={"/logo-light.png"} DarkImage={"/logo-dark.png"} alt={"Meat-Logo"} height={80} width={80} className="h-40 w-40 rounded-2xl" />
         <PageHeaderHeading>MEAT</PageHeaderHeading>
         <PageHeaderDescription>{siteConfig.description}</PageHeaderDescription>
         <Link
