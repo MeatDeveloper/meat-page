@@ -6,7 +6,7 @@ import { FADE_DOWN_ANIMATION_VARIANTS } from "@/config/design"
 import { Card } from "@/components/ui/card"
 
 const tokenomics = [
-  "42% LP",
+  "42% LP (12mo lock)",
   "21% pre-sale",
   "21% future airdrops, grants, Sausager buybacks, Ferdy integration",
   "10% Sausagers",
