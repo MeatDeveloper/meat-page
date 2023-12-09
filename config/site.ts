@@ -25,7 +25,7 @@ export const siteConfig: SiteConfig = {
     "Back to the basic ingredients.",
   localeDefault: "en",
   links: {
-    docs: "https://docs.meat.xyz",
+    docs: "/dashboard",
     discord: "https://discord.gg/uweMsAsGe",
     twitter: "https://twitter.com/sausagers_xyz",
     github: "https://github.com/MeatDeveloper/meat-page",

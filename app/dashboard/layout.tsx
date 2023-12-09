@@ -43,7 +43,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
                 <FaDiscord />
               </Link>
               <Link href={siteConfig.links.github}>
-                <FaDiscord />
+                <FaGithub />
               </Link>
             </div>
           </footer>

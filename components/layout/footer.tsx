@@ -32,6 +32,9 @@ export function Footer({ className, ...props }: HTMLAttributes<HTMLElement>) {
         <LinkComponent href={`${siteConfig.links.discord}`}>
           <FaDiscord />
         </LinkComponent>
+        <LinkComponent href={`${siteConfig.links.github}`}>
+          <FaGithub />
+        </LinkComponent>
       </div>
     </footer>
   )

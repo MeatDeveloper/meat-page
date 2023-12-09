@@ -60,8 +60,6 @@ export default function HomePage() {
           </Link>
           <Link
             href={siteConfig.links.docs}
-            target="_blank"
-            rel="noreferrer noopener"
             className={buttonVariants({ variant: "default" })}
           >
             <LuBook className="mr-2 h-4 w-4" />
