@@ -37,5 +37,5 @@ export const DEPLOY_URL =
 
 
 export const meatTestAddress = "0x0337781a02948a35d154ae817d24b0f755357024"
-export const meatAddress = "0x47c3118Ad183712Acd42648e9E522e13690f29a0"
+export const meatAddress = "0x0337781a02948a35d154ae817d24b0f755357024"
 export const lpAddress = "0x4d0e2e3f4ba0e0e5c4e7e0e1f4c1f5c9f5c9f5c9"

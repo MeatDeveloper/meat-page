@@ -24,8 +24,8 @@ export function MainNav() {
     <div className="mr-4 hidden md:flex">
       <Link href="/" className="mr-6 flex items-center space-x-2">
         <LightDarkImage
-          LightImage="/logo-dark.png"
-          DarkImage="/logo-light.png"
+          LightImage="/logo-light.png"
+          DarkImage="/logo-dark.png"
           alt="MEAT"
           className="rounded-full"
           height={32}
