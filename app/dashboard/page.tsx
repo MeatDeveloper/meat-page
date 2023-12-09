@@ -6,12 +6,12 @@ import { FADE_DOWN_ANIMATION_VARIANTS } from "@/config/design"
 import { Card } from "@/components/ui/card"
 
 const tokenomics = [
-  "21% pre-sale",
   "42% LP",
+  "21% pre-sale",
+  "21% future airdrops, grants, Sausager buybacks, Ferdy integration",
   "10% Sausagers",
   "4% MEAT devs (6mo linear vest)",
   "2% Sausagers team",
-  "21% future airdrops, grants, Sausager buybacks, Ferdy integration",
 ]
 export default function PageDashboard() {
   return (
