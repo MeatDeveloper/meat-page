@@ -7,8 +7,8 @@ import { Card } from "@/components/ui/card"
 
 const tokenomics = [
   "42% LP (12mo lock)",
-  "21% pre-sale",
   "21% future airdrops, grants, Sausager buybacks, Ferdy integration",
+  "21% pre-sale",
   "10% Sausagers",
   "4% MEAT devs (6mo linear vest)",
   "2% Sausagers team",
