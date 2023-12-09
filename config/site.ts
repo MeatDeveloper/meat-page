@@ -12,6 +12,7 @@ interface SiteConfig {
     discord: string
     twitter: string
     github: string
+    ferdy: string
   }
 }
 
@@ -26,9 +27,10 @@ export const siteConfig: SiteConfig = {
   localeDefault: "en",
   links: {
     docs: "/dashboard",
-    discord: "https://discord.gg/uweMsAsGe",
+    discord: "https://discord.gg/YuabytkPgU",
     twitter: "https://twitter.com/sausagers_xyz",
     github: "https://github.com/MeatDeveloper/meat-page",
+    ferdy: "https://ferdyflip.xyz/referral/sausagers"
   },
 }
 
