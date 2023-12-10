@@ -36,3 +36,16 @@ export function trimFormattedBalance(
 export function truncateEthAddress(address: string) {
   return `${address.slice(0, 6)}...${address.slice(-4)}`
 }
+
+interface Response {
+  TokenHolderAddress: string
+  TokenHolderQuantity: string
+}
+
+export function filterAddresses(addresses: Response[]) {
+  const addressesToIgnore = ["0x2fD2C0E235D6F3aA42c328415D8C7266572256A4".toLowerCase(), "0x665d1C8337F1035cfBe13DD94bB669110b975f5F".toLowerCase(), "0x0000000000000000000000000000000000000000"]
+  const arr = addresses.filter( address => { !addressesToIgnore.find(object => object === address.TokenHolderAddress.toLowerCase())});
+  console.log(arr);
+  console.log(addresses)
+  return arr;
+}

@@ -8,13 +8,16 @@ import { lpAddress } from "@/config/site"
 import useSWR from "swr"
 import RenderName from "@/components/blockchain/render-name"
 import { useNetwork } from "wagmi"
-import { trimFormattedBalance } from "@/lib/utils"
+import { trimFormattedBalance, filterAddresses } from "@/lib/utils"
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 export default function PageDashboardLPers() {
   const { chain } = useNetwork()
   const endpoint = `https://api.routescan.io/v2/network/mainnet/evm/43114/etherscan/api?module=token&action=tokenholderlist&contractaddress=${lpAddress}&page=1&offset=25&apikey=YourApiKeyToken`
   const { data: topHolders } = useSWR(endpoint, fetcher);
+
+  
+
   return (
     <motion.div
       animate="show"
@@ -29,9 +32,9 @@ export default function PageDashboardLPers() {
         <p className="text-sm font-light text-gray-400">top liquidity providers</p>
 
           <ul>
-            {Array.isArray(topHolders?.result) && topHolders.result?.map((holder : any) => (
-              <li key={holder.TokenHolderAddress} className="flex justify-between">
-                <a href={`https://snowtrace.io/address/${holder.address}`} target="_blank" rel="noreferrer">
+            {Array.isArray(topHolders?.result) && topHolders.result.map((holder : any) => (
+              <li key={holder?.TokenHolderAddress} className="flex justify-between">
+                <a href={`https://snowtrace.io/address/${holder?.TokenHolderAddress}`} target="_blank" rel="noreferrer">
                   <RenderName address={holder?.TokenHolderAddress} chainId={chain?.id} />
                 </a>
                 {trimFormattedBalance(String(Number(holder?.TokenHolderQuantity) / 1e6)?.toString(), 0)} {"MEAT"}

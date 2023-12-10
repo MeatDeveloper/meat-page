@@ -30,8 +30,8 @@ export default function PageDashboardHolders() {
 
           <ul>
             {Array.isArray(topHolders?.result) && topHolders.result?.map((holder : any) => (
-              <li key={holder.TokenHolderAddress} className="flex justify-between">
-                <a href={`https://snowtrace.io/address/${holder.address}`} target="_blank" rel="noreferrer">
+              <li key={holder?.TokenHolderAddress} className="flex justify-between">
+                <a href={`https://snowtrace.io/address/${holder?.TokenHolderAddress}`} target="_blank" rel="noreferrer">
                   <RenderName address={holder?.TokenHolderAddress} chainId={chain?.id} />
                 </a>
                 {trimFormattedBalance(String(Number(holder?.TokenHolderQuantity) / 1e6)?.toString(), 0)} {"MEAT"}
