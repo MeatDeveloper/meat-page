@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
+import { FaDiscord, FaGithub, FaTwitter, FaTelegram } from "react-icons/fa"
 
 import { menuAdmin } from "@/config/menu-admin"
 import { menuDashboard } from "@/config/menu-dashboard"
@@ -44,6 +44,9 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
               </Link>
               <Link href={siteConfig.links.github}>
                 <FaGithub />
+              </Link>
+              <Link href={siteConfig.links.telegram}>
+                <FaTelegram />
               </Link>
             </div>
           </footer>

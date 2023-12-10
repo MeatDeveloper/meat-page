@@ -5,9 +5,16 @@ import { motion } from "framer-motion"
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/config/design"
 import { Card } from "@/components/ui/card"
 import { meatAddress } from "@/config/site"
+import useSWR from "swr"
+import RenderName from "@/components/blockchain/render-name"
+import { useNetwork } from "wagmi"
+import { trimFormattedBalance } from "@/lib/utils"
 
-
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
 export default function PageDashboardHolders() {
+  const { chain } = useNetwork()
+  const endpoint = `https://api.routescan.io/v2/network/mainnet/evm/43114/etherscan/api?module=token&action=tokenholderlist&contractaddress=${meatAddress}&page=1&offset=24&apikey=YourApiKeyToken`
+  const { data: topHolders } = useSWR(endpoint, fetcher);
   return (
     <motion.div
       animate="show"
@@ -22,13 +29,14 @@ export default function PageDashboardHolders() {
         <p className="text-sm font-light text-gray-400">top holdings</p>
 
           <ul>
-            {/* {topHolders.map((holder) => (
-              <li key={holder.address}>
+            {Array.isArray(topHolders?.result) && topHolders.result?.map((holder : any) => (
+              <li key={holder.TokenHolderAddress} className="flex justify-between">
                 <a href={`https://snowtrace.io/address/${holder.address}`} target="_blank" rel="noreferrer">
-                  {holder.address}
+                  <RenderName address={holder?.TokenHolderAddress} chainId={chain?.id} />
                 </a>
+                {trimFormattedBalance(String(Number(holder?.TokenHolderQuantity) / 1e6)?.toString(), 0)} {"MEAT"}
               </li>
-            ))} */}
+            ))}
             
           </ul>
           <hr className="my-3 dark:opacity-30" />

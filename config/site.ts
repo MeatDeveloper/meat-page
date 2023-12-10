@@ -12,6 +12,7 @@ interface SiteConfig {
     discord: string
     twitter: string
     github: string
+    telegram: string
     ferdy: string
   }
 }
@@ -30,6 +31,7 @@ export const siteConfig: SiteConfig = {
     discord: "https://discord.gg/YuabytkPgU",
     twitter: "https://twitter.com/sausagers_xyz",
     github: "https://github.com/MeatDeveloper/meat-page",
+    telegram: "https://t.me/+nTsLDyk8WEQyYzgx",
     ferdy: "https://ferdyflip.xyz/referral/sausagers"
   },
 }
@@ -40,4 +42,4 @@ export const DEPLOY_URL =
 
 export const meatTestAddress = "0x0337781a02948a35d154ae817d24b0f755357024"
 export const meatAddress = "0x47c3118Ad183712Acd42648e9E522e13690f29a0"
-export const lpAddress = "0x4d0e2e3f4ba0e0e5c4e7e0e1f4c1f5c9f5c9f5c9"
+export const lpAddress = "0x60b881fa346e52590b1aa11d94a6d9047702c44e"

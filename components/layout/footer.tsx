@@ -1,6 +1,6 @@
 import { HTMLAttributes } from "react"
 import Link from "next/link"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
+import { FaDiscord, FaGithub, FaTelegram, FaTwitter } from "react-icons/fa"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -34,6 +34,9 @@ export function Footer({ className, ...props }: HTMLAttributes<HTMLElement>) {
         </LinkComponent>
         <LinkComponent href={`${siteConfig.links.github}`}>
           <FaGithub />
+        </LinkComponent>
+        <LinkComponent href={siteConfig.links.telegram}>
+          <FaTelegram />
         </LinkComponent>
       </div>
     </footer>
