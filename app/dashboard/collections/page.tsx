@@ -3,7 +3,6 @@
 import { motion } from "framer-motion"
 
 import { FADE_DOWN_ANIMATION_VARIANTS } from "@/config/design"
-import { meatAddress } from "@/config/site"
 import { Card } from "@/components/ui/card"
 
 export default function PageDashboardCollections() {

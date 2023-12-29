@@ -3,19 +3,14 @@
 import React from "react"
 import Link from "next/link"
 
-
 import { siteConfig } from "@/config/site"
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
   NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
-import { Separator } from "@/components/ui/separator"
 import { LightDarkImage } from "@/components/shared/light-dark-image"
+import { Button, buttonVariants } from "@/components/ui/button"
+
 
 import { LinkComponent } from "../shared/link-component"
 
@@ -34,6 +29,13 @@ export function MainNav() {
         <span className="meat hidden bg-gradient-to-br from-black to-stone-500 bg-clip-text text-2xl text-transparent dark:from-stone-200 dark:to-red-400 sm:inline-block">
           {siteConfig.name}
         </span>
+      </Link>
+      <Link href="/bridge" className="mr-6 flex items-center space-x-2">
+        <Button 
+        variant="ghost"
+        className="hidden bg-gradient-to-br from-black to-stone-500 bg-clip-text text-2xl text-transparent dark:from-stone-200 dark:to-red-400 sm:inline-block">
+          Bridge
+        </Button>
       </Link>
       <nav className="flex items-center space-x-6 text-base font-medium">
         <MainNavMenu />

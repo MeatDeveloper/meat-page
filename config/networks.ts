@@ -5,7 +5,8 @@ import { env } from "@/env.mjs"
 import { Chain, ChainProviderFn, configureChains } from "wagmi"
 import {
   avalanche,
-  avalancheFuji
+  avalancheFuji,
+  arbitrum
 } from "wagmi/chains"
 import { alchemyProvider } from "wagmi/providers/alchemy"
 import { infuraProvider } from "wagmi/providers/infura"
@@ -15,9 +16,11 @@ import { publicProvider } from "wagmi/providers/public"
 export const ETH_CHAINS_TEST = [
   avalanche,
   avalancheFuji,
+  arbitrum
 ]
 export const ETH_CHAINS_PROD = [
-  avalanche
+  avalanche,
+  arbitrum
 ]
 export const ETH_CHAINS_DEV =
   env.NEXT_PUBLIC_PROD_NETWORKS_DEV === "true"

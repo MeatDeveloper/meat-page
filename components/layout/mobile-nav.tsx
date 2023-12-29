@@ -3,7 +3,6 @@
 import { useState } from "react"
 import Link, { LinkProps } from "next/link"
 import { useRouter } from "next/navigation"
-
 import { LuMenu } from "react-icons/lu"
 
 import { menuDashboard } from "@/config/menu-dashboard"
@@ -41,9 +40,17 @@ export function MobileNav() {
             height={32}
             width={32}
           />
-          <span className="inline-block bg-gradient-to-br from-black to-stone-500 bg-clip-text text-xl font-bold text-transparent dark:from-stone-100 dark:to-yellow-200 sm:text-2xl">
+          <span className="meat inline-block bg-gradient-to-br from-black to-stone-500 bg-clip-text text-2xl text-transparent dark:from-stone-200 dark:to-red-400 sm:text-2xl">
             {siteConfig.name}
           </span>
+        </Link>
+        <Link href="/bridge" className="mr-6 flex items-center space-x-2">
+          <Button
+            variant="ghost"
+            className="inline-block bg-gradient-to-br from-black to-stone-500 bg-clip-text text-xl text-transparent dark:from-stone-200 dark:to-red-400 sm:text-2xl"
+          >
+            Bridge
+          </Button>
         </Link>
         <SheetTrigger asChild>
           <Button

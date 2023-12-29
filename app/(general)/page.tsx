@@ -23,8 +23,8 @@ export default function HomePage() {
           LightImage={"/logo-light.png"}
           DarkImage={"/logo-dark.png"}
           alt={"Meat-Logo"}
-          height={80}
-          width={80}
+          height={160}
+          width={160}
           className="h-40 w-40 rounded-2xl"
         />
         <PageHeaderHeading>MEAT</PageHeaderHeading>

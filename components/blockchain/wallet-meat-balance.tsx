@@ -18,7 +18,7 @@ export const WalletMeatBalance = ({
   const { address } = useAccount()
   const { chain } = useNetwork()
   const { data: balance } = useContractRead({
-    address: chain?.id == 43114 ? meatAddress : meatTestAddress,
+    address: meatAddress,
     abi: erc20ABI,
     functionName: "balanceOf",
     args: [address ?? "" as `0x${string}`],
