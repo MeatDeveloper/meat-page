@@ -131,7 +131,7 @@ export function Bridge() {
           <span className="bridge-label">Fee</span>
           <span>
             {Math.round(fee * 100000) / 100000}{" "}
-            {chain?.network === "avalanche" ? "AVAX" : "ETH"}
+            {chain?.network === "avalanche" ? "AVAX" : chain?.network === "mantle" ? "MNT" : "ETH"}
           </span>
         </div>
         <div className="flex justify-center p-4">
