@@ -60,6 +60,7 @@ export function Bridge() {
   }
 
   const handleChangeTargetChain = (e: any) => {
+    console.log("target chain", e.target.value)
     setTargetChain(e.target.value)
   }
 
@@ -97,9 +98,9 @@ export function Bridge() {
         <Form.Group className="mb-3">
           <div className="flex justify-between">
             <Form.Label className="bridge-label">Send to</Form.Label>
-            <Form.Select>
+            <Form.Select onChange={(e) => handleChangeTargetChain(e)}>
               <option
-                value="arbitrum"
+                value={"arbitrum"}
                 selected={targetChain === "arbitrum"}
                 disabled={chain?.network === "arbitrum"}
                 onChange={handleChangeTargetChain}
@@ -107,12 +108,20 @@ export function Bridge() {
                 Arbitrum
               </option>
               <option
-                value="avalanche"
+                value={"avalanche"}
                 selected={targetChain === "avalanche"}
                 disabled={chain?.network === "avalanche"}
                 onChange={handleChangeTargetChain}
               >
                 Avalanche C-Chain
+              </option>
+              <option
+                value={"mantle"}
+                selected={targetChain === "mantle"}
+                disabled={chain?.network === "mantle"}
+                onSelect={handleChangeTargetChain}
+              >
+                Mantle
               </option>
             </Form.Select>
           </div>

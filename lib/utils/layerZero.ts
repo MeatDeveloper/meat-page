@@ -1453,20 +1453,6 @@ export const meatAbi = [
   }
 ]
 
-interface NetworkConfig {
-  [key: string]: {
-    name: string;
-    chainId: number;
-    lzChainId: number;
-    faucetLink: string | null;
-    bridgeLink: string | null;
-    nativeTokenName: string;
-    nativeToken: string;
-    rpcUrl: string;
-    blockExplorerUrl: string;
-  };
-
-}
 
 export const networkConfig = {
   arbitrum: {
@@ -1489,7 +1475,17 @@ export const networkConfig = {
     nativeToken: "AVAX",
     rpcUrl: "https://api.avax.network/ext/bc/C/rpc",
     blockExplorerUrl: "https://snowtrace.io",
-  }
+  },
+  mantle: {
+    name: "Mantle",
+    chainId: 5000,
+    lzChainId: 181,
+    bridgeLink: null,
+    nativeTokenName: "Mantle",
+    nativeToken: "MNT",
+    rpcUrl: "https://rpc.mantle.xyz	",
+    blockExplorerUrl: "https://explorer.mantle.xyz",
+  },
 };
 
 export const arbitrum = {
@@ -1520,7 +1516,7 @@ export const avalanche = {
   name: "Avalanche",
   network: "avalanche",
   iconUrl:
-    "https://raw.githubusercontent.com/mihailo-maksa/layersync-frontend/main/src/assets/avax.png",
+    "https://cryptologos.cc/logos/avalanche-avax-logo.png?v=029",
   iconBackground: "#fff",
   nativeCurrency: {
     decimals: 18,
@@ -1535,12 +1531,35 @@ export const avalanche = {
     default: { name: "Avalanche", url: "https://snowtrace.io" },
     etherscan: { name: "Avalanche", url: "https://snowtrace.io" },
   },
-  testnet: true,
+  testnet: false,
 };
 
-export const supportedChains = ["arbitrum", "avalanche"];
+export const mantle = {
+  id: networkConfig.mantle.chainId,
+  name: "Mantle",
+  network: "mantle",
+  iconUrl:
+    "https://cryptologos.cc/logos/mantle-mnt-logo.png?v=029",
+  iconBackground: "#fff",
+  nativeCurrency: {
+    decimals: 18,
+    name: "Mantle",
+    symbol: "MNT",
+  },
+  rpcUrls: {
+    public: { http: [networkConfig.mantle.rpcUrl] },
+    default: { http: [networkConfig.mantle.rpcUrl] },
+  },
+  blockExplorers: {
+    default: { name: "Mantle", url: "https://explorer.mantle.xyz" },
+    etherscan: { name: "Mantle", url: "https://explorer.mantle.xyz" },
+  },
+  testnet: false,
+};
 
-export const supportedChainIds = [43114, 42161];
+export const supportedChains = ["arbitrum", "avalanche", "mantle"];
+
+export const supportedChainIds = [43114, 42161, 5000];
 
 export const getProvider = (chain: any) => {
   if (!supportedChains.includes(chain)) {
@@ -1582,7 +1601,6 @@ export const getMeatBalance = async (chain: any, address: any) => {
 };
 export function addressToBytes32(address: string) {
   let newAddress = '0x' + address.substring(2).padStart(64, '0');
-  console.log("newAddress", newAddress);
   return newAddress;
 }
 
