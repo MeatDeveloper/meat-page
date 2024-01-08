@@ -1,9 +1,10 @@
 import { HTMLAttributes } from "react"
 import { ConnectButton } from "@rainbow-me/rainbowkit"
+import { useAccount, useContractRead } from "wagmi"
+import { unknown } from "zod"
+
 import { Button, buttonVariants } from "../ui/button"
-import { useContractRead, useAccount } from "wagmi";
-import { unknown } from "zod";
-import RenderName from "./render-name";
+import RenderName from "./render-name"
 
 interface WalletConnectCustomProps extends HTMLAttributes<HTMLDivElement> {
   classNameConnect?: string
@@ -85,8 +86,8 @@ export const WalletConnectCustom = ({
                       <div
                         style={{
                           background: chain.iconBackground,
-                          width: 12,
-                          height: 12,
+                          width: 24,
+                          height: 24,
                           borderRadius: 999,
                           overflow: "hidden",
                           marginRight: 4,
@@ -95,10 +96,30 @@ export const WalletConnectCustom = ({
                         {chain.iconUrl && (
                           <img
                             alt={chain.name ?? "Chain icon"}
-                            src={chain.iconUrl}
-                            style={{ width: 12, height: 12 }}
+                            src={chain.iconUrl ?? "/mantle-template.png"}
+                            style={{ width: 24, height: 24 }}
                           />
                         )}
+                      </div>
+                    )}
+                    {!chain.hasIcon && (
+                      <div
+                        style={{
+                          background: chain.iconBackground,
+                          width: 24,
+                          height: 24,
+                          borderRadius: 999,
+                          overflow: "hidden",
+                          marginRight: 4,
+                        }}
+                      >
+                        {
+                          <img
+                            alt={chain.name ?? "Chain icon"}
+                            src={"/mantle-template.png"}
+                            style={{ width: 24, height: 24 }}
+                          />
+                        }
                       </div>
                     )}
                   </button>
