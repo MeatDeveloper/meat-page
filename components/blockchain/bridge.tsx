@@ -131,7 +131,11 @@ export function Bridge() {
           <span className="bridge-label">Fee</span>
           <span>
             {Math.round(fee * 100000) / 100000}{" "}
-            {chain?.network === "avalanche" ? "AVAX" : chain?.network === "mantle" ? "MNT" : "ETH"}
+            {chain?.network === "avalanche"
+              ? "AVAX"
+              : chain?.network === "mantle"
+              ? "MNT"
+              : "ETH"}
           </span>
         </div>
         <div className="flex justify-center p-4">
@@ -145,6 +149,17 @@ export function Bridge() {
           </Button>
         </div>
       </Form>
+      <div className="flex justify-center p-4">
+        {chain?.network === "avalanche" && (
+          <Link
+            className={buttonVariants({ variant: "ghost" })}
+            type="button"
+            href="https://app.debridge.finance/deport?inputChain=43114&outputChain=7565164&inputCurrency=0x47c3118Ad183712Acd42648e9E522e13690f29a0&outputCurrency="
+          >
+            Wrap to Solana from Avalanche
+          </Link>
+        )}
+      </div>
     </div>
   )
 }
