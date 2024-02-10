@@ -96,7 +96,7 @@ export const WalletConnectCustom = ({
                         {chain.iconUrl && (
                           <img
                             alt={chain.name ?? "Chain icon"}
-                            src={chain.iconUrl ?? "/mantle-template.png"}
+                            src={chain.iconUrl}
                             style={{ width: 24, height: 24 }}
                           />
                         )}
@@ -116,7 +116,7 @@ export const WalletConnectCustom = ({
                         {
                           <img
                             alt={chain.name ?? "Chain icon"}
-                            src={"/mantle-template.png"}
+                            src={chain.iconUrl}
                             style={{ width: 24, height: 24 }}
                           />
                         }

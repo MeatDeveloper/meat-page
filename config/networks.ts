@@ -6,7 +6,8 @@ import { Chain, ChainProviderFn, configureChains } from "wagmi"
 import {
   avalanche,
   mantle,
-  arbitrum
+  arbitrum,
+  base
 } from "wagmi/chains"
 import { alchemyProvider } from "wagmi/providers/alchemy"
 import { infuraProvider } from "wagmi/providers/infura"
@@ -16,12 +17,14 @@ import { publicProvider } from "wagmi/providers/public"
 export const ETH_CHAINS_TEST = [
   avalanche,
   mantle,
-  arbitrum
+  arbitrum,
+  base
 ]
 export const ETH_CHAINS_PROD = [
   avalanche,
   mantle,
-  arbitrum
+  arbitrum,
+  base
 ]
 export const ETH_CHAINS_DEV =
   env.NEXT_PUBLIC_PROD_NETWORKS_DEV === "true"

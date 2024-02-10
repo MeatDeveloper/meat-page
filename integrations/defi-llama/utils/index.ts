@@ -5,6 +5,8 @@ export const chainIdToName: Record<number, string> = {
   10: "optimism",
   137: "matic-network",
   42161: "arbitrum",
+  8453: "base"
+
 }
 
 export const nameToChainId: Record<string, number> = {

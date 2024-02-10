@@ -1486,6 +1486,17 @@ export const networkConfig = {
     rpcUrl: "https://rpc.mantle.xyz	",
     blockExplorerUrl: "https://explorer.mantle.xyz",
   },
+  base: {
+    name: "Base",
+    chainId: 8453,
+    lzChainId: 184,
+    bridgeLink: null,
+    nativeTokenName: "Ether",
+    nativeToken: "ETH",
+    rpcUrl: "https://base.llamarpc.com",
+    blockExplorerUrl: "https://basescan.io",
+
+  }
 };
 
 export const arbitrum = {
@@ -1557,7 +1568,30 @@ export const mantle = {
   testnet: false,
 };
 
-export const supportedChains = ["arbitrum", "avalanche", "mantle"];
+export const base = {
+  id: networkConfig.base.chainId,
+  name: "Base",
+  network: "base",
+  iconUrl:
+    "data:image/png;base64,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",
+  iconBackground: "#fff",
+  nativeCurrency: {
+    decimals: 18,
+    name: "Base",
+    symbol: "ETH",
+  },
+  rpcUrls: {
+    public: { http: [networkConfig.base.rpcUrl] },
+    default: { http: [networkConfig.base.rpcUrl] },
+  },
+  blockExplorers: {
+    default: { name: "Base", url: networkConfig.base.blockExplorerUrl },
+    etherscan: { name: "Base", url: networkConfig.base.blockExplorerUrl },
+  },
+  testnet: false,
+};
+
+export const supportedChains = ["arbitrum", "avalanche", "mantle", "base"];
 
 export const supportedChainIds = [43114, 42161, 5000];
 
@@ -1573,7 +1607,7 @@ export const getProvider = (chain: any) => {
   return provider;
 };
 
-export const getWeb3Signer = async () => {
+export const getWeb3Signer = () => {
   // @ts-ignore
   if (!window.ethereum) {
     throw new Error("No web3 provider found.");
@@ -1600,13 +1634,13 @@ export const getMeatBalance = async (chain: any, address: any) => {
   return ethers.utils.formatUnits(balanceRaw.toString(), 6);
 };
 export function addressToBytes32(address: string) {
-  let newAddress = '0x' + address.substring(2).padStart(64, '0');
+  const newAddress = '0x' + address.substring(2).padStart(64, '0');
   return newAddress;
 }
 
 export const getLayerZeroFee = async (srcChain: any, dstChain: any, address: any, amount: any) => {
   try {
-    let encodedPackedHex = encodePackedUint16Uint256(1, 2000000);
+    const encodedPackedHex = encodePackedUint16Uint256(1, 2000000);
     const lsContract = await getMeatContract(srcChain);
     const lzFees = await lsContract.estimateSendFee(
       // @ts-ignore
@@ -1626,15 +1660,15 @@ export const getLayerZeroFee = async (srcChain: any, dstChain: any, address: any
 };
 
 function convertToHex(num: number, bytesLength: number) {
-  let hexNum = num.toString(16);
-  let hexLength = bytesLength * 2; // 2 hex digits per byte
+  const hexNum = num.toString(16);
+  const hexLength = bytesLength * 2; // 2 hex digits per byte
   return hexNum.padStart(hexLength, '0');
 }
 
 export function encodePackedUint16Uint256(uint16Val: any, uint256Val: any) {
-  let hexUint16 = convertToHex(uint16Val, 2); // 2 bytes for uint16
-  let hexUint256 = convertToHex(uint256Val, 32); // 32 bytes for uint256
-  let value = "0x" + hexUint16 + hexUint256;
+  const hexUint16 = convertToHex(uint16Val, 2); // 2 bytes for uint16
+  const hexUint256 = convertToHex(uint256Val, 32); // 32 bytes for uint256
+  const value = "0x" + hexUint16 + hexUint256;
   return value;
 }
 
@@ -1654,7 +1688,7 @@ export const bridgeTokens = async (address: any, srcChain: any, dstChain: any, a
   if (nativeFee === undefined) {
     throw new Error(`Error getting fee.`);
   }
-  let encodedPackedHex = encodePackedUint16Uint256(1, 2000000);
+  const encodedPackedHex = encodePackedUint16Uint256(1, 2000000);
   const value = ethers.utils.parseEther((nativeFee).toString());
 
   const callParams = {

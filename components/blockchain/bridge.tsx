@@ -123,6 +123,14 @@ export function Bridge() {
               >
                 Mantle
               </option>
+              <option
+                value={"base"}
+                selected={targetChain === "base"}
+                disabled={chain?.network === "base"}
+                onSelect={handleChangeTargetChain}
+              >
+                Base
+              </option>
             </Form.Select>
           </div>
         </Form.Group>
