@@ -79,7 +79,7 @@ export function Bridge() {
     <div className="">
       <Form className="container">
         <Form.Group className="mb-3 mt-4">
-          <div className="flex justify-between mb-3">
+          <div className="mb-3 flex justify-between">
             <h1 className="bridge-label">Balance</h1>
             <span>{balance}</span>
           </div>

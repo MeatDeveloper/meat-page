@@ -82,6 +82,21 @@ html {
   font-family: 'Inter';
 }
 
+.hub {
+  display: block;
+  font-family: sans-serif;
+  font-weight: bold;
+  }
+
+  .hub span:nth-child(2) {
+  background:linear-gradient(90deg, rgb(231 229 228) 0%, rgb(248 113 113) 100%);
+  color: #000000;
+  border-radius: 5px;
+  padding: 5px;
+  
+  display: inline-block;
+  }
+
 @layer base {
   * {
     @apply border-border;
@@ -91,3 +106,4 @@ html {
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
+

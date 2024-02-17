@@ -1,5 +1,5 @@
 "use client"
-
+import "styles/globals.css"
 import React from "react"
 import Link from "next/link"
 
@@ -33,8 +33,8 @@ export function MainNav() {
       <Link href="/bridge" className="mr-6 flex items-center space-x-2">
         <Button 
         variant="ghost"
-        className="hidden bg-gradient-to-br from-black to-stone-500 bg-clip-text text-2xl text-transparent dark:from-stone-200 dark:to-red-400 sm:inline-block">
-          Bridge
+         className="hub flex items-center justify-center bg-gradient-to-br from-black to-stone-500 bg-clip-text text-2xl text-transparent dark:from-stone-200 dark:to-red-400 sm:inline-flex">
+          <span className="pr-1">Meat</span><span>Hub</span>
         </Button>
       </Link>
       <nav className="flex items-center space-x-6 text-base font-medium">
