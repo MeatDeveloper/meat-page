@@ -37,6 +37,13 @@ export function MainNav() {
           <span className="pr-1">Meat</span><span>Hub</span>
         </Button>
       </Link>
+      <Link href="https://s27lh8-4567.csb.app/" target="_blank" className="mr-6 flex items-center space-x-2">
+        <Button 
+        variant="ghost"
+         className="hub flex items-center justify-center bg-gradient-to-br from-black to-stone-500 bg-clip-text text-2xl text-transparent dark:from-stone-200 dark:to-red-400 sm:inline-flex">
+          <span className="pr-1">Sausagers Game</span>
+        </Button>
+      </Link>
       <nav className="flex items-center space-x-6 text-base font-medium">
         <MainNavMenu />
       </nav>
