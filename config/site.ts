@@ -29,7 +29,7 @@ export const siteConfig: SiteConfig = {
   links: {
     docs: "/dashboard",
     discord: "https://discord.gg/YuabytkPgU",
-    twitter: "https://twitter.com/sausagers_xyz",
+    twitter: "https://x.com/TheMeatToken",
     github: "https://github.com/MeatDeveloper/meat-page",
     telegram: "https://t.me/+nTsLDyk8WEQyYzgx",
     ferdy: "https://ferdyflip.xyz/referral/sausagers"
